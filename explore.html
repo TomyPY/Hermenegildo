@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/explore.css">
+    <link rel="stylesheet" href="/style/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f2d1dec8c8.js" crossorigin="anonymous"></script>
+    <title>Hermenegildo</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <h2><a href="index.html" class="nav__logo">Hermenegildo</a><h2></h2>
+                <div class="search__container-wrapper">
+                    <div class="search__container">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="nav__explore" placeholder="Search a movie">
+                        <button id="search">Search</button>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav__ul">
+                <li class="nav__li"><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
+                <li class="nav__li"><i class="fa-solid fa-magnifying-glass"></i><a href="#">Explore</a></li>
+                <li class="nav__li"><i class="fa-solid fa-circle-user"></i><a href="#" id="login">Log in</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="buttons">
+        <button class="button-filter" onclick="filterMovies('all')">Todos</button>
+        <button class="button-filter" onclick="filterMovies('drama')">Drama</button>
+        <button class="button-filter" onclick="filterMovies('horror')">Terror</button>
+        <button class="button-filter" onclick="filterMovies('adventure')">Aventura</button>
+        <button class="button-filter" onclick="filterMovies('action')">Accion</button>
+        <button class="button-filter" onclick="filterMovies('animation')">Animacion</button>
+    </div>
+    <div id="products"></div>
+    <script src="./js/objects.js"></script>
+    <script src="./js/account.js"></script>
+    <script src="./js/explore.js"></script>
+</body>

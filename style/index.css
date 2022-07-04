@@ -1,0 +1,491 @@
+@font-face {
+    font-family: Futura;
+    src: url(../fonts/FuturaPTMedium.otf);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(216, 213, 213);
+}
+
+h2{
+    font-weight: 500;
+}
+
+body{
+    background-image: url(../img/Wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1920px;
+}
+
+header{
+    text-decoration: none;
+    font-size: 26px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 5%;
+    background-color: rgba(8, 4, 196, 0.226);
+    z-index: 0;
+    border-bottom-width: 2.5px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.678) 50%, rgba(255, 255, 255, 0.2) 100%) 1;
+    box-shadow: 5px 5px 30px -8px rgba(79, 66, 150, 0.418);
+}
+
+a{
+    text-decoration: none;
+    list-style-type: none;
+    text-shadow: 5px 5px 3px rgba(0, 60, 255, 0.075);
+}
+
+.nav__logo{
+    font-family: Futura;
+    font-size: 65px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.2px;
+    color: aliceblue;
+}
+
+.nav__explore{
+    width: 20vw;
+    height: 2vw;
+    background: none;
+    color: rgb(69, 60, 202);
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid rgb(69, 60, 202);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.nav__explore::placeholder{
+    color: rgb(69, 60, 202);
+}
+
+.nav__li{
+    display: inline-block;
+    padding: 0px 20px;
+    margin-right: 5px;
+    font-size: 30px;
+}
+
+.nav__li a{
+    text-align: center;
+    padding: 2px;
+}
+
+.container-panel{
+    overflow: hidden;
+    position: absolute;
+    left: 49.4vw;
+    width: 50%;
+    height: 850px;
+}
+
+.container-relative{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.panel{
+    position: absolute;
+    margin-top: 5%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.panel img{
+    width: 100%;
+    z-index: 2;
+}
+
+.animation-panel{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-top: 60px;
+    margin-right: 100px;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.animation-panel img{
+    width: 80%;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.horror-panel{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-top: 205px;
+    margin-right: 220px;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.horror-panel img{
+    width: 80%;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.drama-panel{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-top: 375px;
+    margin-right: 230px;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.drama-panel img{
+    width: 80%;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.rating-panel{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-top: 530px;
+    margin-right: 195px;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.rating-panel img{
+    width: 80%;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.fiction-panel{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-top: 660px;
+    margin-right: 100px;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.fiction-panel img{
+    width: 80%;
+    transition: all 1s;
+    z-index: 10;
+}
+
+.box-relative{
+    position: relative;
+}
+
+.rectangle-text{
+    font-family: Futura;
+    text-align: left;
+    font-size: 50px;
+    margin-top: 21px;
+    margin-left: 20px;
+}
+
+.rectangle-animation{
+    opacity: 0%;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 0px;
+    height: 100px;
+    transition: all 0.5s;
+    margin-top: 15%;
+    background: linear-gradient(90deg, rgba(7, 4, 196, 0.514) 70%, rgba(8,4,196,0) 100%);
+    z-index: 1;
+}
+
+.rectangle-drama{
+    opacity: 0%;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    width: 0px;
+    height: 100px;
+    transition: all 0.5s;
+    margin-top: 1%;
+    background: linear-gradient(90deg, rgba(7, 4, 196, 0.514) 70%, rgba(8,4,196,0) 100%);
+    z-index: 1;
+}
+
+.rectangle-horror{
+    opacity: 0%;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    width: 0px;
+    height: 100px;
+    transition: all 0.5s;
+    margin-top: 10%;
+    background: linear-gradient(90deg, rgba(7, 4, 196, 0.514) 70%, rgba(8,4,196,0) 100%);
+    z-index: 1;
+}
+
+.rectangle-rating{
+    opacity: 0%;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    width: 0px;
+    height: 100px;
+    transition: all 0.5s;
+    margin-top: 5%;
+    background: linear-gradient(90deg, rgba(7, 4, 196, 0.514) 70%, rgba(8,4,196,0) 100%);
+    z-index: 1;
+}
+
+.rectangle-scienceFiction{
+    opacity: 0%;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    width: 0px;
+    height: 100px;
+    transition: all 0.5s;
+    margin-top: 2%;
+    background: linear-gradient(90deg, rgba(7, 4, 196, 0.514) 70%, rgba(8,4,196,0) 100%);
+    z-index: 1;
+}
+
+.animation-panel:hover img{
+    width: 130%;
+}
+
+.animation-panel:hover{
+    margin-right: 140px;
+}
+
+.animation-panel:hover .rectangle-animation{
+    width: 400px;
+    opacity: 100%;
+}
+
+.rating-panel:hover img{
+    width: 180%;
+}
+
+.rating-panel:hover{
+    margin-right: 210px;
+}
+
+.rating-panel:hover .rectangle-rating{
+    width: 400px;
+    opacity: 100%;
+}
+
+.fiction-panel:hover img{
+    width: 130%;
+}
+
+.fiction-panel:hover{
+    margin-right: 120px;
+}
+
+.fiction-panel:hover .rectangle-scienceFiction{
+    width: 480px;
+    opacity: 100%;
+}
+
+.drama-panel:hover img{
+    width: 180%;
+}
+
+.drama-panel:hover{
+    margin-right: 250px;
+}
+
+.drama-panel:hover .rectangle-drama{
+    width: 400px;
+    opacity: 100%;
+}
+
+.horror-panel:hover img{
+    width: 130%;
+}
+
+.horror-panel:hover{
+    margin-right: 240px;
+}
+
+.horror-panel:hover .rectangle-horror{
+    width: 400px;
+    opacity: 100%;
+}
+/*ABOUT US CONTAINER*/
+.sobre-nosotros{
+
+    font-family: Roboto;
+    background-color: rgba(71, 68, 255, 0.349);
+    outline: 4px solid rgba(20, 20, 192, 0.349);
+    box-shadow: 5px 5px 30px -8px rgba(79, 66, 150, 0.418);
+    padding: 15px;
+    font-size: 20px;
+    width: 40vw;
+    margin: 70px 78px 20px;
+    text-align: left;
+}
+
+/*ABOUT US TITLE*/
+.sobre-nosotros h2{
+    font-weight: 1000;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-size: 60px;
+    color: aliceblue;
+    margin: 20px 0px;
+}
+
+/*ABOUT US PARAGRAPH*/
+.sobre-nosotros p{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.sliders-container{
+    z-index: -1;
+}
+
+.movie-list-wrapper{
+    background-color: rgba(71, 68, 255, 0.788);
+    outline: 4px solid rgba(20, 20, 192, 0.349);
+    position: relative;
+    overflow:hidden;
+    width: 100%;
+    height: 21vw;
+}
+
+/*TITLE OF THE SLIDER*/
+.movie-list-title{
+    font-size: 45px;
+}
+
+/*CONTAINER OF MOVIE-LIST*/
+.movie-list-container{
+    padding: 10px;
+    height: 30vw;
+    margin-left: 70px;
+    max-width: 60vw;
+    align-content: center;
+    position: relative;
+}
+
+/*ALL THE MOVIES OF A SLIDER*/
+.movie-list{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    margin-left: 20px;
+    min-width: 300px;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+}
+
+/*MOVIE OF SLIDER*/
+.movie-list-item{
+    border-radius: 7px;
+    border: 4px solid rgba(72, 144, 252, 0.692);
+    position: relative;
+    margin-right: 20px;
+    margin: 100px 20px 0px 0px;
+    max-width: 100%;
+    min-height: 20vw;
+    background-color: black;
+}
+
+/*IMG OF THE MOVIE*/
+.movie-list-item-img{
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    min-width: 250px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    filter: brightness(30%);
+    transform: scale(1.11);
+}
+
+.movie-list-item:hover .movie-list-item-title{
+    opacity: 100%;
+}
+
+.movie-list-item:hover .movie-list-item-button{
+    opacity: 100%;
+    left: 70px;
+}
+
+/*MOVIE TITLE IN SLIDER*/
+.movie-list-item-title{
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.5s ease-in-out;
+    font-size: 35px;
+    font-weight: 500;
+    opacity: 0%;
+    position: absolute;
+    top: 10%;
+    left: 10px;
+    color: white;
+}
+/*CONTAINER BUTTON*/
+.movie-list-item-button{
+    color: white;
+    transition: all 0.5s ease-in-out;
+    opacity: 0%;
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    z-index: 5;
+    top: 80%;
+    left: 1px;
+    background-color: rgb(82, 66, 224);
+    outline: none;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+}
+/*ARROWS SLIDERS*/
+.arrow{
+    color: rgb(74, 42, 255);
+    position: absolute;
+    left: 55vw;
+    font-size: 100px;
+    top: 240px;
+    cursor: pointer;
+    opacity: 70%;
+    margin-left: 100px;
+}
+/*
+/* BUTTON VER MAS*/
+.button{
+    height: 30px;
+    width: 100px;
+    margin: 50px;
+    background: none;
+    outline: none;
+    border: 2px solid rgba(95, 60, 252, 0.438);
+    border-radius: 5px;
+}
+
+.hide{
+    display: none;
+}

@@ -1,0 +1,120 @@
+@font-face{
+    src: url(/fonts/FuturaPTDemi.otf);
+    font-family: Futura;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(69, 60, 202);
+}
+
+body{
+    background-image: url(../img/Wallpaper-login-register.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    list-style-type: none;
+    text-shadow: 5px 5px 3px rgba(0, 60, 255, 0.075);
+}
+
+.logo{
+    font-family: Futura;
+    font-size: 70px;
+    font-weight: 1000;
+    align-self: center;
+    margin: 0px auto 5vw auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2.5px rgb(69, 60, 202);
+}
+
+.logo p{
+    font-size: 40px;
+    text-align: center;
+    -webkit-text-stroke: transparent;
+    -webkit-text-fill-color: rgb(69, 60, 202);
+    font-weight: 300;
+}
+
+.form{
+    background-color: rgba(71, 69, 212, 0.055);
+    border: 3.5px solid rgba(119, 121, 247, 0.219);
+    align-self: center;
+    margin-left: 12vw;
+    width: 90%;
+    max-width: 500px;
+    min-width: 500px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px -8px rgba(79, 66, 150, 0.418);
+    text-align: center;
+}
+
+.form__title{
+    font-size: 3rem;
+    margin-bottom: .5rem;   
+}
+
+.form__paragraph{
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.form__link{
+    font-weight: 400;
+    color: rgb(69, 60, 202);
+}
+
+.form__container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form__group{
+    position: relative;
+    color: gray;
+}
+
+.form__input{
+    width: 100%;
+    background: none;
+    color: rgb(69, 60, 202);
+    font-size: 1.5rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(69, 60, 202);
+    font-family: 'Roboto', sans-serif;
+}
+
+.form__input::placeholder{
+    color: rgb(69, 60, 202);
+    opacity: 40%;
+}
+
+.form__submit{
+    font-size: 1.5em;
+    background-color: rgba(151, 133, 255, 0.075);
+    border-radius: 5px;
+    width: 100%;
+    border: 3.5px solid rgba(119, 121, 247, 0.219);
+    font-weight: 600;
+    outline: none;
+    box-shadow: 0px 5px 10px -5px rgba(81, 66, 150, 0.418);
+    padding: 6px;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+#error{
+    display: none;
+    color: rgb(255, 71, 71);
+    font-size: 17px;
+}
