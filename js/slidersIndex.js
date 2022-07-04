@@ -60,7 +60,7 @@ function generateSlider(genre, peliculas){
         let button=document.createElement("button")
         button.classList.add("movie-list-item-button")
         button.innerText="Ver mas"
-        button.setAttribute("onclick", `window.location.href='movie.html?productName=${object.name}'`)
+        button.setAttribute("onclick", `window.location.href='movie.html?productID=${object.id}'`)
 
         movieListItem.appendChild(img)
         movieListItem.appendChild(spanTitle)

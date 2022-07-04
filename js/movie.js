@@ -27,6 +27,7 @@ let productID=getParameter("productID")
 //BUCLE POR TODAS LAS PELICULAS BUSCANDO EL QUE TIENE EL MISMO PRODUCT ID CUANDO LO ENCUENTRA LE ASIGNA A LOS ELEMENTOS HTML SUS CARACTERISTICAS
 for(pelicula of peliculas){
     if(pelicula.id==productID){
+        console.log(pelicula)
         title[0].innerText=pelicula.name
         img.setAttribute("src", `${pelicula.img}`)
         img.style.overflow="hidden"
@@ -73,7 +74,6 @@ document.getElementsByClassName("send-comment")[0].addEventListener("click", ()=
 
     }else{
         if(comment!=""){
-            let userName=user.name+" "+user.surname
             pelicula.comments.push({userName, comment})
             localStorage.setItem("peliculas", JSON.stringify(peliculas))
             location.reload()

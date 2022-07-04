@@ -105,7 +105,7 @@ if(!localStorage.getItem("peliculas")){
                 .then(response=>{
                     let movie=response
                     let video=movie.videos
-                    peliculas.push(new Pelicula(movie.original_title, movie.genres, movie.release_date, movie.vote_average, movie.title.runtime,`https://image.tmdb.org/t/p/original${movie.poster_path}`, video, movie.overview))
+                    peliculas.push(new Pelicula(movie.original_title, movie.genres, movie.release_date, movie.vote_average, movie.runtime,`https://image.tmdb.org/t/p/original${movie.poster_path}`, video, movie.overview))
                     if(counter==movieNames.length){
                         localStorage.setItem("peliculas", JSON.stringify(peliculas))
                     }
