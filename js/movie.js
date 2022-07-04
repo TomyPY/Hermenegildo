@@ -34,7 +34,7 @@ for(pelicula of peliculas){
         document.getElementsByClassName("info-stats-genre")[0].innerText=`Genre: ${pelicula.genre[0].name}`
         document.getElementsByClassName("info-stats-date")[0].innerText=`Release date: ${pelicula.releaseDate}`
         document.getElementsByClassName("info-stats-rating")[0].innerText=`Rating: ${pelicula.rating}`
-        document.getElementsByClassName("info-stats-long")[0].innerText=`Duration: ${pelicula.duration}`
+        document.getElementsByClassName("info-stats-long")[0].innerText=`Duration: ${pelicula.duration} minutes`
         description.innerText=pelicula.description
         document.getElementsByClassName("preview-movie")[0].innerText=`Movie-${pelicula.releaseDate.split("-")[0]}-${pelicula.genre[0].name}`
 

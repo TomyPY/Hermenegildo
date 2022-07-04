@@ -115,4 +115,5 @@ if(!localStorage.getItem("peliculas")){
             })
             .catch(err => console.error(err)) 
         })
+        location.reload()
 }
