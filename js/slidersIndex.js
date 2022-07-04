@@ -1,5 +1,8 @@
 let peliculas=JSON.parse(localStorage.getItem("peliculas")) || []
 
+window.onload=()=>{
+    generateSlider("animation", peliculas)
+}
 
 const allmovieList=document.getElementsByClassName("movie-list") //LISTA CON TODOS LOS SLIDERS
 const movieListContainer=document.getElementsByClassName("movie-list-container")

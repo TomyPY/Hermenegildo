@@ -333,9 +333,6 @@ a{
 .sobre-nosotros{
 
     font-family: Roboto;
-    background-color: rgba(71, 68, 255, 0.349);
-    outline: 4px solid rgba(20, 20, 192, 0.349);
-    box-shadow: 5px 5px 30px -8px rgba(79, 66, 150, 0.418);
     padding: 15px;
     font-size: 20px;
     width: 40vw;
@@ -465,11 +462,12 @@ a{
 }
 /*ARROWS SLIDERS*/
 .arrow{
-    color: rgb(74, 42, 255);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2.5px rgb(255, 255, 255);
     position: absolute;
     left: 55vw;
     font-size: 100px;
-    top: 240px;
+    top: 260px;
     cursor: pointer;
     opacity: 70%;
     margin-left: 100px;

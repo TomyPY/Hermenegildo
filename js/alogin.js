@@ -8,7 +8,6 @@ let errorText=document.getElementById("error") // PARTE DEL LOGIN ERROR
 let button=document.getElementById("button")  // BUTTON DE INGRESAR
 button.addEventListener("click", login)  // CUANDO LE DEN CLICK EJECUTA LA FUNCION
 
-
 function login(e){
 
     let resultado=personasRegistradas.find(objeto=> objeto.name===name.value && objeto.pass===password.value) // SI EL NOMBRE Y CONTRASEÑA EXISTEN DEVUELVE ESE OBJETO PERSONA

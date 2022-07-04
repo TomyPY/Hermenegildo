@@ -108,6 +108,7 @@ if(!localStorage.getItem("peliculas")){
                     peliculas.push(new Pelicula(movie.original_title, movie.genres, movie.release_date, movie.vote_average, movie.runtime,`https://image.tmdb.org/t/p/original${movie.poster_path}`, video, movie.overview))
                     if(counter==movieNames.length){
                         localStorage.setItem("peliculas", JSON.stringify(peliculas))
+                        location.reload()
                     }
                     
                 })
