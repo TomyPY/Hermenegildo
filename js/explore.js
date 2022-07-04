@@ -1,5 +1,39 @@
-let peliculas=JSON.parse(localStorage.getItem("peliculas"))
+var peliculas=JSON.parse(localStorage.getItem("peliculas"))
+var buttonAll=document.getElementsByClassName("button-filter-all")[0]
+var buttonDrama=document.getElementsByClassName("button-filter-drama")[0]
+var buttonHorror=document.getElementsByClassName("button-filter-horror")[0]
+var buttonAdventure=document.getElementsByClassName("button-filter-adventure")[0]
+var buttonAction=document.getElementsByClassName("button-filter-action")[0]
+var buttonAnimation=document.getElementsByClassName("button-filter-animation")[0]
 
+//FUNCION PARA FILTRAR PELICULAS CON LOS BOTONES
+function filterMovies(parameter){
+    console.log("hola")
+    let buttons=document.querySelectorAll("button-value")
+    buttons.forEach((button)=>{
+        if(parameter==(button.innerText).toLowerCase()){
+            button.classList.add("active")
+        }else{
+            button.classList.remove("active")
+        }
+    })
+
+    let elements = document.querySelectorAll(".card")
+    
+    elements.forEach((element)=>{
+        if(parameter=="all"){
+            element.classList.remove("hide")
+        }else{
+            if(element.classList.contains(parameter)){
+                element.classList.remove("hide")
+            }else{
+                element.classList.add("hide")
+            }
+        }
+    })
+}
+
+//POR DEFECTO APLICA EL FILTRO ALL
 window.onload=()=>{
     filterMovies("all")
 }
@@ -37,6 +71,13 @@ for(pelicula of peliculas){
     document.getElementById("products").appendChild(card)
 }
 
+buttonAll.addEventListener("click", ()=>{filterMovies("all")})
+buttonDrama.addEventListener("click", ()=>{filterMovies("drama")})
+buttonHorror.addEventListener("click", ()=>{filterMovies("horror")})
+buttonAdventure.addEventListener("click", ()=>{filterMovies("adventure")})
+buttonAction.addEventListener("click", ()=>{filterMovies("action")})
+buttonAnimation.addEventListener("click", ()=>{filterMovies("animation")})
+
 //MUESTRA TODAS LAS PELICULAS QUE INCLUYAN LA PALABRA QUE BUSCASTE
 document.getElementById("search").addEventListener("click", ()=>{
     //BARRA DE BUSQUEDA
@@ -55,29 +96,5 @@ document.getElementById("search").addEventListener("click", ()=>{
     })
 })
 
-//FUNCION PARA FILTRAR PELICULAS CON LOS BOTONES
-function filterMovies(parameter){
-    let buttons=document.querySelectorAll("button-value")
-    buttons.forEach((button)=>{
-        if(parameter==(button.innerText).toLowerCase()){
-            button.classList.add("active")
-        }else{
-            button.classList.remove("active")
-        }
-    })
 
-    let elements = document.querySelectorAll(".card")
-    
-    elements.forEach((element)=>{
-        if(parameter=="all"){
-            element.classList.remove("hide")
-        }else{
-            if(element.classList.contains(parameter)){
-                element.classList.remove("hide")
-            }else{
-                element.classList.add("hide")
-            }
-        }
-    })
-}
 
