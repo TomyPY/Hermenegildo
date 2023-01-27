@@ -43,11 +43,11 @@ for(pelicula of peliculas){
                 let genreBox=document.createElement("div")
                 let genreName=document.createElement("h3")
                 genreBox.classList.add("genre-box")
-                genreName.innerText=pelicula.genre[i].name
+                genreName.innerText=pelicula.genre[i]
                 genreBox.appendChild(genreName)
                 document.getElementsByClassName("container-genres")[0].appendChild(genreBox)
             }
-        document.getElementsByClassName("video-link")[0].setAttribute("src", `https://www.youtube.com/embed/${pelicula.video.results[pelicula.video.results.length-1].key}`)
+        document.getElementsByClassName("video-link")[0]
         break
     }
 }

@@ -23,7 +23,7 @@ function verCatalogoGenero(peliculas, genre){
 
         peliculasgenre=peliculas.filter((pelicula)=>{
             for(gen of pelicula.genre){
-                if((gen.name).toLowerCase().includes(genre)){
+                if(gen.toLowerCase().includes(genre)){
                     return (pelicula)
                 }
                 

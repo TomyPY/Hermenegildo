@@ -24,7 +24,7 @@ class Pelicula{
     constructor(name, genre, releaseDate, rating, duration, img, video, description){
         this.id=totalPeliculas++
         this.name=name
-        this.genre=genre
+        this.genre=genre.split(", ")
         this.releaseDate=releaseDate
         this.rating=rating
         this.duration=duration
@@ -66,7 +66,7 @@ class Pelicula{
 //Funcion para pedir los datos de las peliculas a la API de TheMovieDB
 function fetchData(name, counter, peliculas){
     
-    fetch(`https://api.themoviedb.org/3/search/movie?query=${name}&api_key=8ec84a587a43b79e5694800b97232954`)
+    fetch(`http://www.omdbapi.com/?t=asdasd&plot=full&api_key=3f719f93`)
             .then(response => response.json())
             .then(response => {
                 fetch(`https://api.themoviedb.org/3/movie/${response.results[0].id}?api_key=8ec84a587a43b79e5694800b97232954&append_to_response=videos`)
@@ -97,23 +97,22 @@ if(!localStorage.getItem("peliculas")){
     let counter=0
     movieNames.forEach((name)=>{
             counter++
-            fetch(`https://api.themoviedb.org/3/search/movie?query=${name}&api_key=8ec84a587a43b79e5694800b97232954`)
-            .then(response => response.json())
-            .then(response => {
-                fetch(`https://api.themoviedb.org/3/movie/${response.results[0].id}?api_key=8ec84a587a43b79e5694800b97232954&append_to_response=videos`)
-                .then(response=>response.json())
-                .then(response=>{
-                    let movie=response
-                    let video=movie.videos
-                    peliculas.push(new Pelicula(movie.original_title, movie.genres, movie.release_date, movie.vote_average, movie.runtime,`https://image.tmdb.org/t/p/original${movie.poster_path}`, video, movie.overview))
-                    if(counter==movieNames.length){
-                        localStorage.setItem("peliculas", JSON.stringify(peliculas))
-                        location.reload()
-                    }
+            fetch(`http://www.omdbapi.com/?apikey=3f719f93&t=${name.replace(/ /g,"-")}&plot=full`)
+            .then(response=>response.json())
+            .then(response=>{
+                let movie = response
+
+                console.log(response)
+                
+
+                let video='example.com'
+                peliculas.push(new Pelicula(movie.Title, movie.Genre, movie.Released, movie.imdbRating, movie.Runtime, movie.Poster, movie.Plot))
+                if(counter==movieNames.length){
+                    localStorage.setItem("peliculas", JSON.stringify(peliculas))
                     
-                })
-                .catch(err => console.error(err))
+                }
+                
             })
-            .catch(err => console.error(err)) 
+            .catch(err => console.error(err))
         })
-}
+        }

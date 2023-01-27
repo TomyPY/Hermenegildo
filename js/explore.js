@@ -41,12 +41,12 @@ window.onload=()=>{
 //CREO LAS CARDS PARA CADA PELICULA
 for(pelicula of peliculas){
     let card=document.createElement("div")
-    if(pelicula.genre[0].name=="Family" || pelicula.genre[0].name=="Fantasy"){
-        pelicula.genre[0].name="Animation"
-    }else if(pelicula.genre[0].name=="Crime"){
-        pelicula.genre[0].name="Drama"
+    if(pelicula.genre[0]=="Family" || pelicula.genre[0]=="Fantasy"){
+        pelicula.genre[0]="Animation"
+    }else if(pelicula.genre[0]=="Crime"){
+        pelicula.genre[0]="Drama"
     }
-    card.classList.add("card", ((pelicula.genre[0].name).toLowerCase()).replace(" ", ""), "hide")
+    card.classList.add("card", ((pelicula.genre[0]).toLowerCase()).replace(" ", ""), "hide")
     let imgContainer=document.createElement("div")
     imgContainer.classList.add("image-container")
     let image_link=document.createElement("a")
