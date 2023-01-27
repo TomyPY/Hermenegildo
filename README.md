@@ -1,4 +1,4 @@
-#Project Title: Hermenegildo
+# Project Title: Hermenegildo
 This project is a film production website, created as the final project for a Javascript course. It is focused on practical application of Javascript. The website showcases the work of a fictional film producer named Hermenegildo. It has a login/register form, sliders with movies, and a explore field where you can search your movie by genre.
 
 ### Features
