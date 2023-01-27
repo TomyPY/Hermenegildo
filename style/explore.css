@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url(../img/Wallpaper.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -10,21 +10,21 @@ body{
     src: url(../fonts/FuturaPTMedium.otf);
 }
 
-*{
+* {
     font-family: 'Roboto', sans-serif;
     color: rgb(216, 213, 213);
 }
 
-h2{
+h2 {
     font-weight: 500;
 }
 
-header{
+header {
     text-decoration: none;
     font-size: 26px;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,13 +37,13 @@ nav{
     box-shadow: 5px 5px 30px -8px rgba(79, 66, 150, 0.418);
 }
 
-a{
+a {
     text-decoration: none;
     list-style-type: none;
     text-shadow: 5px 5px 3px rgba(0, 60, 255, 0.075);
 }
 
-.nav__logo{
+.nav__logo {
     font-family: Futura;
     font-size: 65px;
     -webkit-text-fill-color: transparent;
@@ -51,7 +51,7 @@ a{
     color: aliceblue;
 }
 
-.nav__explore{
+.nav__explore {
     color: white;
     width: 20vw;
     height: 2vw;
@@ -68,23 +68,23 @@ a{
     font-weight: 500;
 }
 
-.nav__explore::placeholder{
+.nav__explore::placeholder {
     color: rgb(255, 255, 255);
 }
 
-.nav__li{
+.nav__li {
     display: inline-block;
     padding: 0px 20px;
     margin-right: 5px;
     font-size: 30px;
 }
 
-.nav__li a{
+.nav__li a {
     text-align: center;
     padding: 2px;
 }
 
-#search{
+#search {
     outline: none;
     border: none;
     background-color: rgb(51, 51, 151);
@@ -96,16 +96,16 @@ a{
     cursor: pointer;
 }
 
-#search:active{
+#search:active {
     background-color: rgb(30, 30, 100);
 }
 
-#buttons{
+#buttons {
     width: 100%;
     text-align: center;
 }
 
-.button-filter{
+.button-filter {
     height: 70px;
     width: 200px;
     margin: 20px 50px;
@@ -118,22 +118,22 @@ a{
     font-weight: 700;
     color: rgb(236, 236, 236);
     cursor: pointer;
-    
+
 }
 
-.button-filter:active{
+.button-filter:active {
     background-color: rgba(70, 48, 197, 0.493);
 }
 
-#products{
+#products {
     display: grid;
-    grid-template-columns:repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 1em;
     padding: 2em 0;
     margin-left: 3vw;
 }
 
-.card{
+.card {
     outline: 2px solid rgba(150, 134, 224, 0.596);
     background-color: rgba(45, 31, 105, 0.267);
     max-width: 19em;
@@ -143,39 +143,39 @@ a{
     box-shadow: 0.3em 0.3em 2em rgba(74, 101, 250, 0.322);
 }
 
-.image-container{
+.image-container {
     text-align: center;
     outline: 2px solid rgba(255, 255, 255, 0.603);
     height: 360px;
-   
+
 }
 
-img{
+img {
     object-fit: cover;
     box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
     height: 100%;
     width: 100%;
 }
 
-.container{
+.container {
     padding-top: 1em;
     color: #110f29;
 }
 
-.container h5{
+.container h5 {
     color: white;
     font-weight: 500;
 }
 
-.movie-name{
+.movie-name {
     font-weight: 1000;
     font-size: 30px;
 }
 
-.name-container{
+.name-container {
     text-align: center;
 }
 
-.hide{
+.hide {
     display: none;
 }
